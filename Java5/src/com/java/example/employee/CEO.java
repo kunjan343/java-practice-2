@@ -32,4 +32,9 @@ public class CEO extends Employee {
     public double calculatePay() {
         return this._hours * this._hourlySalary + this._bonus + this._stockPrice * this._numberSharesSold;
     }
+
+    /*
+     * There are 2 scopes of improvement in this package.
+     * Find and improve by yourself.
+     */
 }
