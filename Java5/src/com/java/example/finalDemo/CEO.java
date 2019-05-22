@@ -1,4 +1,4 @@
-package com.java.example.constructor;
+package com.java.example.finalDemo;
 
 public final class CEO extends Manager {
     private int _stockPrice;
