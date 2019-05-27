@@ -1,5 +1,6 @@
 package patkunja;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Scanner;
 
@@ -13,15 +14,15 @@ public class Main {
         double data;
         do {
             try {
-                System.out.printf(message + ": ");
+                System.out.println(message + ": ");
                 data = _input.nextDouble();
                 Method md = this._iv.getClass().getDeclaredMethod(method, double.class);
                 md.invoke(this._iv, data);
             } catch (Exception ex) {
-                if (ex instanceof IllegalArgumentException) {
-                    System.out.println("ERROR: Invalid input.");
-                } else {
+                if (ex instanceof InvocationTargetException) {
                     System.out.println(ex.getCause().getMessage());
+                } else {
+                    System.out.println("ERROR: Please enter number");
                 }
                 data = -1;
                 _input.nextLine();
@@ -34,15 +35,15 @@ public class Main {
         int data;
         do {
             try {
-                System.out.printf(message + ": ");
+                System.out.println(message + ": ");
                 data = _input.nextInt();
                 Method md = this._iv.getClass().getDeclaredMethod(method, int.class);
                 md.invoke(this._iv, data);
             } catch (Exception ex) {
-                if (ex instanceof IllegalArgumentException) {
-                    System.out.println("ERROR: Invalid input.");
-                } else {
+                if (ex instanceof InvocationTargetException) {
                     System.out.println(ex.getCause().getMessage());
+                } else {
+                    System.out.println("ERROR: Please enter number");
                 }
                 data = -1;
                 _input.nextLine();
@@ -60,13 +61,12 @@ public class Main {
                 Method md = this._iv.getClass().getDeclaredMethod(method, String.class);
                 md.invoke(this._iv, data);
             } catch (Exception ex) {
-                if (ex instanceof IllegalArgumentException) {
-                    System.out.println("ERROR: Invalid input.");
-                } else {
+                if (ex instanceof InvocationTargetException) {
                     System.out.println(ex.getCause().getMessage());
+                } else {
+                    System.out.println("ERROR: Please enter valid string value");
                 }
                 data = null;
-                _input.nextLine();
             }
         } while (data == null);
         return data;
@@ -98,7 +98,7 @@ public class Main {
         int units = -1;
         do {
             try {
-                System.out.printf("Enter # of units to buy: ");
+                System.out.println("Enter # of units to buy: ");
                 units = _self._input.nextInt();
                 if (units < 0) {
                     System.out.println("ERROR: Units must be 0 or more.");
