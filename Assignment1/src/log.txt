@@ -1,0 +1,118 @@
+"C:\Program Files\Java\jdk-11.0.1\bin\java.exe" -javaagent:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\lib\idea_rt.jar=65203:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\bin -Dfile.encoding=UTF-8 -classpath D:\PROJECTS\java-practice-2\Assignment1\out\production\Assignment1 patkunja.Main
+Enter Inventory Item Id:
+d13
+ERROR: Invalid Id, expected format : ABC-1234
+Enter Inventory Item Id:
+123
+ERROR: Invalid Id, expected format : ABC-1234
+Enter Inventory Item Id:
+dedf2f2
+ERROR: Invalid Id, expected format : ABC-1234
+Enter Inventory Item Id:
+dew-1352
+Enter Item Name:
+basic rice pack of 15 kg
+Enter Quantity On Hand:
+-1r
+ERROR: Please enter number
+Enter Quantity On Hand:
+fewfewf
+ERROR: Please enter number
+Enter Quantity On Hand:
+17
+Enter Re-Order Point:
+-31413
+ERROR: Re-Order Point must be greater then 0.
+Enter Re-Order Point:
+19
+Enter Selling Price:
+14.64
+
+dew-1352 (basic rice pack of 15 kg), QOH: 17 Price: $14.64
+
+Enter # of units to buy:
+4
+Total cost: $66.17
+
+Process finished with exit code 0
+
+
+"C:\Program Files\Java\jdk-11.0.1\bin\java.exe" -javaagent:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\lib\idea_rt.jar=65214:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\bin -Dfile.encoding=UTF-8 -classpath D:\PROJECTS\java-practice-2\Assignment1\out\production\Assignment1 patkunja.Main
+Enter Inventory Item Id:
+hRF-2411
+Enter Item Name:
+Android 9.2 powered devicedriver
+Enter Quantity On Hand:
+5
+Enter Re-Order Point:
+7
+Enter Selling Price:
+56.99
+
+hRF-2411 (Android 9.2 powered devicedriver), QOH: 5 Price: $56.99
+
+Enter # of units to buy:
+7
+Total cost: $450.79
+
+Process finished with exit code 0
+
+
+"C:\Program Files\Java\jdk-11.0.1\bin\java.exe" -javaagent:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\lib\idea_rt.jar=65220:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\bin -Dfile.encoding=UTF-8 -classpath D:\PROJECTS\java-practice-2\Assignment1\out\production\Assignment1 patkunja.Main
+Enter Inventory Item Id:
+310fr\
+ERROR: Invalid Id, expected format : ABC-1234
+Enter Inventory Item Id:
+13f1
+ERROR: Invalid Id, expected format : ABC-1234
+Enter Inventory Item Id:
+132
+ERROR: Invalid Id, expected format : ABC-1234
+Enter Inventory Item Id:
+AHD-3521
+Enter Item Name:
+
+ERROR: You must enter an item name.
+Enter Item Name:
+Power cable 3m
+Enter Quantity On Hand:
+253
+Enter Re-Order Point:
+155
+Enter Selling Price:
+4.49
+
+AHD-3521 (Power cable 3m), QOH: 253 Price: $4.49
+
+Enter # of units to buy:
+3
+Total cost: $15.22
+
+Process finished with exit code 0
+
+
+"C:\Program Files\Java\jdk-11.0.1\bin\java.exe" -javaagent:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\lib\idea_rt.jar=65225:C:\Users\kunja\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\191.7141.44\bin -Dfile.encoding=UTF-8 -classpath D:\PROJECTS\java-practice-2\Assignment1\out\production\Assignment1 patkunja.Main
+Enter Inventory Item Id:
+%f
+ERROR: Invalid Id, expected format : ABC-1234
+Enter Inventory Item Id:
+HED-0001
+Enter Item Name:
+Distinct primer
+Enter Quantity On Hand:
+-1
+ERROR: Quantity On Hand must be 0 or more.
+Enter Quantity On Hand:
+0
+Enter Re-Order Point:
+23
+Enter Selling Price:
+74
+
+HED-0001 (Distinct primer), QOH: 0 Price: $74.00
+
+Enter # of units to buy:
+1
+Total cost: $83.62
+
+Process finished with exit code 0

@@ -1,0 +1,215 @@
+package patkunja;
+
+import java.util.regex.Pattern;
+
+public class Inventory {
+    private String id;
+    private String name;
+    private int qoh;    // Quantity On Hand
+    private int rop;    // Re-Order Point
+    private double sellPrice;
+
+    Inventory() {
+        this.setId("ABC-1234");
+        this.setName("New Item");
+        this.setQoh(0);
+        this.setRop(25);
+        this.setSellPrice(0);
+    }
+
+    Inventory(String id, String name, double sellPrice) {
+        this.setId(id);
+        this.setName(name);
+        this.setSellPrice(sellPrice);
+    }
+
+    Inventory(String id, String name, int qoh, int rop, double sellPrice) {
+        this.setId(id);
+        this.setName(name);
+        this.setQoh(qoh);
+        this.setRop(rop);
+        this.setSellPrice(sellPrice);
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        Pattern pattern = Pattern.compile("[a-zA-Z]{3}[-][0-9]{4}");
+        if (!pattern.matcher(id).matches()) {
+            throw new IllegalArgumentException("ERROR: Invalid Id, expected format : ABC-1234");
+        }
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("ERROR: You must enter an item name.");
+        }
+        this.name = name;
+    }
+
+    public int getQoh() {
+        return qoh;
+    }
+
+    public void setQoh(int qoh) {
+        if (qoh < 0) {
+            throw new IllegalArgumentException("ERROR: Quantity On Hand must be 0 or more.");
+        }
+        this.qoh = qoh;
+    }
+
+    public int getRop() {
+        return rop;
+    }
+
+    public void setRop(int rop) {
+        if (rop < 1) {
+            throw new IllegalArgumentException("ERROR: Re-Order Point must be greater then 0.");
+        }
+        this.rop = rop;
+    }
+
+    public double getSellPrice() {
+        return sellPrice;
+    }
+
+    public void setSellPrice(double sellPrice) {
+        if (sellPrice < 0) {
+            throw new IllegalArgumentException("ERROR: Selling price nust be greater then 0.");
+        }
+        this.sellPrice = sellPrice;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("\n%s (%s), QOH: %d Price: $%.2f\n", this.id, this.name, this.qoh, this.sellPrice);
+    }
+}
+
+
+package patkunja;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Scanner;
+
+public class Main {
+    // Scanner class
+    private Scanner _input = new Scanner(System.in);
+    // Inventory class instance
+    private Inventory _iv;
+
+    private double getDoubleInput(String message, String method) {
+        double data;
+        do {
+            try {
+                System.out.println(message + ": ");
+                data = _input.nextDouble();
+                Method md = this._iv.getClass().getDeclaredMethod(method, double.class);
+                md.invoke(this._iv, data);
+            } catch (Exception ex) {
+                if (ex instanceof InvocationTargetException) {
+                    System.out.println(ex.getCause().getMessage());
+                } else {
+                    System.out.println("ERROR: Please enter number");
+                }
+                data = -1;
+                _input.nextLine();
+            }
+        } while (data < 0);
+        return data;
+    }
+
+    private int getIntInput(String message, String method) {
+        int data;
+        do {
+            try {
+                System.out.println(message + ": ");
+                data = _input.nextInt();
+                Method md = this._iv.getClass().getDeclaredMethod(method, int.class);
+                md.invoke(this._iv, data);
+            } catch (Exception ex) {
+                if (ex instanceof InvocationTargetException) {
+                    System.out.println(ex.getCause().getMessage());
+                } else {
+                    System.out.println("ERROR: Please enter number");
+                }
+                data = -1;
+                _input.nextLine();
+            }
+        } while (data < 0);
+        return data;
+    }
+
+    private String getStringInput(String message, String method) {
+        String data;
+        do {
+            try {
+                System.out.println(message + ": ");
+                data = _input.nextLine();
+                Method md = this._iv.getClass().getDeclaredMethod(method, String.class);
+                md.invoke(this._iv, data);
+            } catch (Exception ex) {
+                if (ex instanceof InvocationTargetException) {
+                    System.out.println(ex.getCause().getMessage());
+                } else {
+                    System.out.println("ERROR: Please enter valid string value");
+                }
+                data = null;
+            }
+        } while (data == null);
+        return data;
+    }
+
+    public static void main(String[] args) {
+        // Default inventory
+        Inventory iv = new Inventory();
+        // Main method object
+        Main _self = new Main();
+        _self._iv = iv;
+
+        // Ask for inventory input values
+        _self.getStringInput("Enter Inventory Item Id", "setId");
+        _self.getStringInput("Enter Item Name", "setName");
+        _self.getIntInput("Enter Quantity On Hand", "setQoh");
+        _self.getIntInput("Enter Re-Order Point", "setRop");
+        _self.getDoubleInput("Enter Selling Price", "setSellPrice");
+
+        // Print current inventory information
+        System.out.println(_self._iv);
+
+        // Notify user about low inventory
+        if (_self._iv.getQoh() < _self._iv.getQoh()) {
+            System.out.println("INFO: You need to order more " + _self._iv.getName());
+        }
+
+        // Ask for number of units to buy
+        int units = -1;
+        do {
+            try {
+                System.out.println("Enter # of units to buy: ");
+                units = _self._input.nextInt();
+                if (units < 0) {
+                    System.out.println("ERROR: Units must be 0 or more.");
+                    units = -1;
+                }
+            } catch (Exception ex) {
+                System.out.println("ERROR: Please enter correct # of units.");
+                units = -1;
+                _self._input.nextLine();
+            }
+        } while (units < 0);
+
+        // Total cost of purchase
+        double totalCost = _self._iv.getSellPrice() * units;
+        totalCost += (totalCost * 0.13);
+        System.out.printf("Total cost: $%.2f\n", totalCost);
+    }
+}
