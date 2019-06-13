@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="application.MainController">
+    <children>
+        <AnchorPane prefHeight="480.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <Button layoutX="49.0" layoutY="375.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="103.0"
+                        text="NOPE"/>
+                <TextField layoutX="86.0" layoutY="123.0">
+                    <tooltip>
+                        <Tooltip text="unique userid"/>
+                    </tooltip>
+                </TextField>
+                <Text layoutX="154.0" layoutY="67.0" scaleX="3.0" scaleY="3.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Sign up"/>
+                <Button layoutX="200.0" layoutY="375.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="110.0"
+                        text="Privacy gone"/>
+                <CheckBox layoutX="74.0" layoutY="297.0" mnemonicParsing="false" text="I agree Terms &amp; Conditions"/>
+                <Label layoutX="87.0" layoutY="102.0" text="Username"/>
+                <Label layoutX="88.0" layoutY="165.0" text="Password"/>
+                <TextField layoutX="86.0" layoutY="251.0">
+                    <tooltip>
+                        <Tooltip text="only you can see if you are alone"/>
+                    </tooltip>
+                </TextField>
+                <Label layoutX="87.0" layoutY="230.0" text="Confirm password"/>
+                <PasswordField layoutX="86.0" layoutY="186.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>
