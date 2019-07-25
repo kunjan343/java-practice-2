@@ -1,0 +1,45 @@
+.text-field {
+    -fx-border-style: none;
+    -fx-background-radius: 0;
+    -fx-background-color: #a9a9a9, white, white, white;
+    -fx-background-insets: 0 0 -1 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.text-field:focused {
+    -fx-background-color: #3F51B5, white, white, white;
+    -fx-background-insets: 0 0 -2 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.input-label {
+    -fx-color: #e6e7e7;
+}
+
+.save-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.save-button:pressed {
+    -fx-background-color: #81C784;
+}
+
+.cancel-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.cancel-button:pressed {
+    -fx-background-color: #e57373;
+}
+
+.show-button {
+    -fx-background-color: #FF9800;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.show-button:pressed {
+    -fx-background-color: #FFB74D;
+}
