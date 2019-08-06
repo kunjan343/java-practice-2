@@ -1,0 +1,55 @@
+.fab {
+    -fx-background-radius: 50%;
+}
+
+.fab:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.back-button {
+    -fx-background-color: none;
+    -fx-text-fill: #FFFFFF;
+}
+
+.back-button:pressed {
+    -fx-background-color: none;
+    -fx-text-fill: #CFD8DC;
+}
+
+.text-field, .text-area {
+    -fx-border-style: none;
+    -fx-background-radius: 0;
+    -fx-background-color: #a9a9a9, white, white, white;
+    -fx-background-insets: 0 0 -1 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-shadow: none;
+    -fx-background-color: #3F51B5, white, white, white;
+    -fx-background-insets: 0 0 -2 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.input-label {
+    -fx-fill: #212121;
+}
+
+.save-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.save-button:pressed {
+    -fx-background-color: #81C784;
+}
+
+.cancel-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.cancel-button:pressed {
+    -fx-background-color: #e57373;
+}

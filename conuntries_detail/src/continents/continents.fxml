@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="768.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="continents.ContinentsController">
+    <children>
+        <Rectangle arcWidth="5.0" fill="#3f51b5" height="80.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+        <GridPane alignment="CENTER" layoutY="88.0" prefHeight="668.0" prefWidth="600.0" AnchorPane.topAnchor="88.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <ImageView fx:id="imgAsia" fitHeight="130.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/asia.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="Asia">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                    <children>
+                        <ImageView fx:id="imgAfrica" fitHeight="130.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/africa.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="Africa">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                    <children>
+                        <ImageView fx:id="imgAntarctica" fitHeight="130.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/antarctica.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="Antarctica">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <ImageView fx:id="imgAustralia" fitHeight="130.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/australia.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="Australia">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                    <children>
+                        <ImageView fx:id="imgEurope" fitHeight="130.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/europe.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="Europe">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <children>
+                        <ImageView fx:id="imgNorthAmerica" fitHeight="130.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/north_america.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="North America">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                    <children>
+                        <ImageView fx:id="imgSouthAmerica" fitHeight="130.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/south_america.jpg" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <Text fill="#424242" strokeType="OUTSIDE" strokeWidth="0.0" text="South America">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+        <Text fill="WHITE" layoutX="29.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Continents">
+            <font>
+                <Font name="SansSerif Bold" size="24.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
