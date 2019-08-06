@@ -3,7 +3,6 @@ package fileOperation;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-
 public class Utils {
     public static String formatData(String fName, String lName, String phone, String email) {
         return String.format(fName + "," + lName + "," + phone + "," + email);
