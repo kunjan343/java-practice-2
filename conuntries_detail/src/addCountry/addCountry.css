@@ -21,13 +21,13 @@
     -fx-border-style: none;
     -fx-background-radius: 0;
     -fx-background-color: #a9a9a9, white, white, white;
-    -fx-background-insets: 0 0 -1 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-background-insets: -1 -1 -1 -1, 0 0 0 0, 0 0 0 0, 0 0 0 0;
 }
 
 .text-field:focused, .text-area:focused {
     -fx-shadow: none;
     -fx-background-color: #3F51B5, white, white, white;
-    -fx-background-insets: 0 0 -2 0, 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-background-insets: -2 -2 -2 -2  , 0 0 0 0, 0 0 0 0, 0 0 0 0;
 }
 
 .input-label {
