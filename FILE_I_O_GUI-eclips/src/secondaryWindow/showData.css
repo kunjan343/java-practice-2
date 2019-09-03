@@ -1,0 +1,30 @@
+.list-cell {
+    -fx-text-fill: #000000;
+    -fx-padding: 10px 24px;
+    -fx-border-radius: 15px;
+}
+
+.list-cell:hover {
+    -fx-background-color: #CFD8DC;
+}
+
+.back-button {
+    -fx-background-color: #42A5F5;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.back-button:pressed {
+    -fx-background-color: #64B5F6;
+}
+
+.refresh-button {
+    -fx-background-color: #FF9800;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.refresh-button:pressed {
+    -fx-background-color: #FFB74D;
+}
+

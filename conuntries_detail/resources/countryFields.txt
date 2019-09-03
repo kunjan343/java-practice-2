@@ -1,0 +1,12 @@
+name
+capital
+first language
+geographical area
+
+population
+currency
+calling code
+country domain
+
+motto
+short description
